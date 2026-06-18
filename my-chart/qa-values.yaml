@@ -1,0 +1,15 @@
+name: my-app
+replicas: 2
+
+image: nginx:latest
+
+createNamespace: true
+namespace: qa
+
+serviceType: LoadBalancer
+servicePort: 8080
+serviceTargetPort: 8080
+
+env:
+  config:
+    key1: qa-value1
