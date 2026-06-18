@@ -1,0 +1,15 @@
+name: my-app
+replicas: 1
+
+image: nginx:latest
+
+createNamespace: true
+namespace: dev
+
+serviceType: LoadBalancer
+servicePort: 80
+serviceTargetPort: 80
+
+env:
+  config:
+    key1: dev-value1
